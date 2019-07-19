@@ -1,0 +1,5 @@
+name: "StarGate-Addons"
+version: 1.0.0
+author: "Alemiz"
+description: "Addons for StarGate Plugin"
+main: alemiz.stargateaddons.StarGateAddons
