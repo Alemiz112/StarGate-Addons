@@ -20,6 +20,7 @@ import net.md_5.bungee.event.EventHandler;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class StarGateAddons extends Plugin implements Listener {
 
@@ -87,6 +88,11 @@ public class StarGateAddons extends Plugin implements Listener {
 
         ServerPing.Protocol prot = new ServerPing.Protocol("", ping.getVersion().getProtocol());
         ping.setVersion(prot);
+
+        /* MOTD Changer*/
+        List<String> list = cfg.getStringList("MOTD");
+        String modt = list.get(new Random().nextInt(list.size()));
+        ping.setDescription(modt);
 
         event.setResponse(ping);
     }
